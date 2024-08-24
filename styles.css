@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body {
+    width: 100dvw;
+    height: 100dvh;
+    background-color: hsl(233, 47%, 7%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 68%;
+    height: 55%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.wrapper>.part1 {
+    background-color: hsl(244, 38%, 16%);
+    height: 100%;
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+}
+
+.part1 .partTop {
+    width: 70%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.partTop .mainTitle {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.73pc;
+}
+
+.partTop .subPara {
+    font-size: 10px;
+    font-family: "Lexend Deca", sans-serif;
+    font-weight: 400;
+    line-height: 20px;
+    opacity: 0.6;
+}
+
+.part1 .partBottom {
+    width: 70%;
+    height: 17%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+}
+
+.partBottom div {
+    font-size: 18px;
+}
+
+.partBottom p {
+    font-size: 10px;
+    font-weight: lighter;
+    text-transform: uppercase;
+    font-family: "Lexend Deca", sans-serif;
+    opacity: 0.4;
+}
+
+.wrapper>.part2 {
+    position: relative;
+    height: 100%;
+    width: 50%;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    overflow: hidden;
+}
+
+.part2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.part2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(122, 0, 156, 0.462);
+    pointer-events: none;
+}
+
+@media screen and(max-width:600px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+    }
+
+    .wrapper .part1 {
+        order: 2;
+        flex: 1 1 512px;
+        border-bottom-right-radius: 7px;
+        min-height: 50%;
+    }
+
+    .wrapper .part2 {
+        order: 1;
+        flex: 1 1 512px;
+        border-top-left-radius: 7px;
+    }
+
+    .part1 .mainTitle {
+        width: 100%;
+        font-size: medium;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .wrapper {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 90%;
+    }
+
+    .wrapper .part1 {
+        order: 2;
+        flex: 1 1 512px;
+        border-bottom-right-radius: 7px;
+        min-height: 50%;
+        border-top-left-radius: 0px;
+    }
+
+    .wrapper .part2 {
+        order: 1;
+        flex: 1 1 512px;
+        border-top-left-radius: 7px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .part1 .mainTitle {
+        width: 100%;
+        font-size: medium;
+    }
+}
